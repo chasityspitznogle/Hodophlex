@@ -1,0 +1,104 @@
+<!-- Add Route -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Log New Block</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Global design system -->
+  <link rel="stylesheet" href="styles/design-system.css">
+</head>
+
+<body>
+  <main class="settings-page">
+
+    <!-- Header -->
+    <header class="settings-header">
+      <button class="icon-button" id="backBtn">←</button>
+      <div>
+        <h1>Log New Block</h1>
+        <p class="text-muted">Record your earnings and mileage</p>
+      </div>
+    </header>
+
+    <!-- Form Card -->
+    <form id="routeForm" class="card route-form">
+
+      <!-- Station -->
+      <label>
+        Station
+        <select id="stationSelect" required>
+          <option value="">Select station</option>
+        </select>
+      </label>
+
+      <!-- Date -->
+      <label>
+        Date
+        <input type="date" id="dateInput" required>
+      </label>
+
+      <!-- Time Mode -->
+      <div class="tabs">
+        <button type="button" class="tab active" data-mode="times">Start / End</button>
+        <button type="button" class="tab" data-mode="hours">Total Hours</button>
+      </div>
+
+      <!-- Time Range -->
+      <div id="timeRange" class="time-group">
+        <label>
+          Start Time
+          <input type="time" id="startTime">
+        </label>
+        <label>
+          End Time
+          <input type="time" id="endTime">
+        </label>
+      </div>
+
+      <!-- Manual Hours -->
+      <div id="hourEntry" class="time-group" hidden>
+        <label>
+          Hours Worked
+          <input type="number" id="manualHours" min="0.5" step="0.25">
+        </label>
+      </div>
+
+      <!-- Duration Summary -->
+      <div class="summary-row">
+        <span>Block Duration</span>
+        <strong id="durationDisplay">—</strong>
+      </div>
+
+      <!-- Pay -->
+      <label>
+        Base Pay
+        <input type="number" id="basePay" step="0.01">
+      </label>
+
+      <label>
+        Tips
+        <input type="number" id="tips" step="0.01">
+      </label>
+
+      <!-- Mileage -->
+      <label>
+        Mileage
+        <input type="number" id="mileage" step="0.1">
+      </label>
+
+      <!-- Notes -->
+      <label>
+        Notes
+        <textarea id="notes" rows="3"></textarea>
+      </label>
+
+      <button class="button primary">Save Route</button>
+    </form>
+
+  </main>
+
+  <script src="scripts/add-route.js"></script>
+</body>
+</html>

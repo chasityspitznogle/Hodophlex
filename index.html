@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hodophlex Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="src/scripts/css/style.css">
+
+  <!-- <script src="src/scripts/js/chart.js" defer></script> -->
+  <script src="src/scripts/js/sidebar.js" defer></script>
+</head>
+
+<body>
+  <header class="dashboard-header">
+    <h1>Hodophlex Dashboard</h1>
+    <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Hodophlex</h2>
+      <button id="closeSidebar">&times;</button>
+    </div>
+
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="earnings.html">Earnings</a></li>
+      <li><a href="mileage.html">Mileage</a></li>
+      <li><a href="expenses.html">Expenses</a></li>
+      <li><a href="blocks.html">Blocks</a></li>
+      <li><a href="reports.html">Reports</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+  
+  <div id="sidebarOverlay" class="sidebar-overlay"></div>
+
+<!-- Hamburger Button -->
+<button id="openSidebar" class="hamburger">&#9776;</button>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="metrics">
+      <!-- Example card -->
+      <div class="card">
+        <h3>Earnings Today</h3>
+        <p>$0.00</p>
+      </div>
+      <div class="card">
+        <h3>Mileage Today</h3>
+        <p>0 miles</p>
+      </div>
+      <div class="card">
+        <h3>Expenses</h3>
+        <p>$0.00</p>
+      </div>
+    </section>
+
+    <section class="charts">
+      <canvas id="earningsChart"></canvas>
+    </section>
+  </main>
+</body>
+</html>
