@@ -1,41 +1,57 @@
-<div class="settings-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="src/scripts/css/settings.css" />
+</head>
 
-  <!-- Header -->
-  <header class="settings-header">
-    <button class="icon-button" id="backBtn">←</button>
-    <div>
-      <h1>Settings</h1>
-      <p class="text-muted">Customize your ZenFlexx experience</p>
-    </div>
-  </header>
+<body>
+  <main class="settings-page">
 
-  <!-- Appearance -->
-  <section class="card">
-    <h2>Appearance</h2>
-    <p class="text-muted">Choose how ZenFlexx looks</p>
-
-    <div class="theme-grid" id="themeGrid"></div>
-  </section>
-
-  <!-- Font Size -->
-  <section class="card">
-    <h2>Text Size</h2>
-    <p class="text-muted">Adjust text size for readability</p>
-
-    <div class="font-list" id="fontList"></div>
-  </section>
-
-  <!-- Ads -->
-  <section class="card">
-    <h2>Advertisement</h2>
-
-    <div class="switch-row">
+    <header class="settings-header">
+      <a href="index.html" class="back-link">←</a>
       <div>
-        <strong>Adult Ads</strong>
-        <p class="text-muted">Show adult-oriented advertisements</p>
+        <h1>Settings</h1>
+        <p>Customize your Hodophlex experience</p>
       </div>
-      <input type="checkbox" id="adultAdsToggle">
-    </div>
-  </section>
+    </header>
 
-</div>
+    <section class="settings-card">
+      <h2>Appearance</h2>
+      <p class="subtitle">Choose how Hodophlex looks</p>
+      <h4>Theme</h4>
+      <div id="themeGrid" class="theme-grid"></div>
+    </section>
+
+    <section class="settings-card">
+      <h2>Text Size</h2>
+      <p class="subtitle">Adjust text size for readability</p>
+      <div id="fontList" class="option-list"></div>
+    </section>
+
+    <section class="settings-card">
+      <h2>Support Hodophlex</h2>
+      <p class="subtitle">Help keep Hodophlex free and independent</p>
+      <a class="support-link" href="#">Buy Me a Coffee</a>
+      <a class="support-link" href="#">Cash App</a>
+    </section>
+
+    <section class="settings-card">
+      <h2>About</h2>
+      <p>Hodophlex — your all-in-one toolkit for Amazon Flex drivers.</p>
+      <p>Designed by a Flex driver, Hodophlex helps you track routes, mileage, earnings, expenses, and receipts — all in one clean, easy-to-use app. Stay organized, drive smarter, and maximize your Flex earnings.
+
+      <div class="about-row"><span>Version </span><span>0.1.0</span></div>
+      <div class="about-row"><span>Built by </span><span>Chasity Spitznogle</span></div>
+      <div class="about-row"><span>Purpose </span><span>Amazon Flex tracking & reporting</span></div>
+      <p>Have feedback or found a bug? Let me know at Chasity.L.Spitznogle@gmail.com.
+    </section>
+
+    <button id="saveSettings">Save Settings</button>
+  </main>
+
+  <script type="module" src="src/scripts/js/settings.js"></script>
+  <script type="module" src="src/scripts/js/appsettings.js"></script>
+</body>
+</html>

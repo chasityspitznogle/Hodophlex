@@ -365,19 +365,6 @@ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   color: #3b82f6;
 }
 
-/* Hamburger */
-.hamburger {
-  font-size: 30px;
-  background: none;
-  border: none;
-  color: #e5e7eb;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 1100;
-}
-
 /* Sidebar visible */
 .sidebar.active {
   left: 0;
@@ -413,3 +400,61 @@ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
   color: #3b82f6;
   font-weight: 600;
 }
+
+/* =====================================================
+   DASHBOARD HEADER
+   ===================================================== */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 800;
+
+  height: 64px;
+  background: #0f172a;
+  border-bottom: 1px solid #1f2937;
+
+  /* This creates the centering system */
+  display: grid;
+  place-items: center;
+
+  /* Prevent overlap with hamburger */
+  padding: 0 56px;
+
+  position: relative;
+}
+
+/* Hamburger pinned to top-left */
+.hamburger {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  font-size: 26px;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger:hover {
+  background: hsl(var(--accent) / 0.15);
+  border-radius: 50%;
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+}
+
+/* Title truly centered */
+.dashboard-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  color: hsl(var(--foreground));
+  letter-spacing: 0.3px;
+
+  pointer-events: none;
+}
+
